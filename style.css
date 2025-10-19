@@ -37,11 +37,11 @@ header {
 
 .main-content {
   flex: 1;
-  background: #fff;
-  border-radius: 1rem;
-  border: 2px solid #ddd;
-  padding: 1.5rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 8px;
+  color: #000; 
+  font-family: 'Verdana', sans-serif;
 }
 
 /* Tab buttons */

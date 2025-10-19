@@ -1,25 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap');
 
 body {
+  background: linear-gradient(120deg, #eaf0ff, #fff);
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #e7ecff, #f7faff);
-  color: #222;
-  text-align: center;
   margin: 0;
-  padding: 2rem;
+  color: #222;
 }
 
 header {
-  font-family: 'Orbitron', sans-serif;
+  text-align: center;
   background: #000;
   color: #fff;
   padding: 1rem 0;
+  border-bottom: 4px solid #00a2ff;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 0 10px #00a2ff;
+}
+
+.container {
+  display: flex;
+  max-width: 1000px;
+  margin: 2rem auto;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.sidebar {
+  background: #f5f7ff;
+  border: 2px solid #ccc;
   border-radius: 1rem;
-  box-shadow: 0 0 20px #7f8cff;
+  padding: 1rem;
+  width: 30%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.main-content {
+  flex: 1;
+  background: #fff;
+  border-radius: 1rem;
+  border: 2px solid #ddd;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.profile-pic img {
+  width: 100%;
+  border-radius: 1rem;
+  border: 3px solid #00a2ff;
+  box-shadow: 0 0 8px #7f8cff;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
 }
 
 a {
-  color: #3366ff;
+  color: #0070f3;
   text-decoration: none;
 }
 
@@ -33,7 +69,9 @@ ul {
 }
 
 footer {
-  margin-top: 2rem;
-  font-size: 0.8rem;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem;
   color: #666;
+  border-top: 1px solid #ddd;
 }

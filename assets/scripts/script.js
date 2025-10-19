@@ -1,4 +1,3 @@
-<script>
 const song = document.getElementById("mySong");
 const playBtn = document.getElementById("playBtn");
 const bars = document.querySelectorAll(".bar");
@@ -33,4 +32,3 @@ song.addEventListener("ended", () => {
   playBtn.textContent = "▶";
   bars.forEach(bar => bar.style.animationPlayState = "paused");
 });
-</script>

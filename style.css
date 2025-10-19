@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #e7ecff, #f7faff);
+  color: #222;
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+}
+
+header {
+  font-family: 'Orbitron', sans-serif;
+  background: #000;
+  color: #fff;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px #7f8cff;
+}
+
+a {
+  color: #3366ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #666;
+}

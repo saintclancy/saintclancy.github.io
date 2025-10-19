@@ -35,6 +35,14 @@ header {
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
+.GeneratedMarquee {
+font-size:20px;
+line-height:1.3em;
+color:#000000;
+background-color:#FFFFFF;
+padding:1.5em;
+}
+
 .main-content {
   flex: 1;
   padding: 12px;

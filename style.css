@@ -65,6 +65,12 @@ header {
   animation: pulse 1.2s infinite;
 }
 
+.status-badge:hover {
+  background-color: #222;
+  box-shadow: 0 0 10px #00ff66;
+  cursor: default;
+}
+
 h1, h2, h3 {
   font-family: 'Orbitron', sans-serif;
 }

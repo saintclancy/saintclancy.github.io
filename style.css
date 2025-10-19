@@ -124,6 +124,23 @@ header {
   border-radius: 4px;
 }
 
+/* Fullscreen video behind content */
+#bg-video {
+  position: fixed;   /* Stays in place */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Fills screen without stretching */
+  z-index: -1;       /* Behind all content */
+}
+
+/* Make sure your content is above video */
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
 h1, h2, h3 {
   font-family: 'Arimo', sans-serif;
 }

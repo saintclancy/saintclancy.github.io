@@ -36,10 +36,10 @@ header {
 }
 
 .GeneratedMarquee {
-font-size:20px;
+font-size:16px;
 line-height:1.3em;
-color:#000000;
-background-color:#FFFFFF;
+color:#FFFFFF;
+background-color:#000000;
 padding:1.5em;
 }
 

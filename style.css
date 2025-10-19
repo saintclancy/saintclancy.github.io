@@ -44,7 +44,7 @@ header {
 }
 
 .profile-pic img {
-  width: 100%;
+  width: 80%;
   border-radius: 1rem;
   border: 3px solid #00a2ff;
   box-shadow: 0 0 8px #7f8cff;
@@ -62,8 +62,8 @@ header {
   border-radius: 8px;
 }
 .status-icon {
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
 }
 
 h1, h2, h3 {

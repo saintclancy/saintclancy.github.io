@@ -2,33 +2,46 @@ const song = document.getElementById("mySong");
 const playBtn = document.getElementById("playBtn");
 const bars = document.querySelectorAll(".bar");
 
-// Set initial volume
+// Set volume to 50%
 song.volume = 0.5;
 
-// Try autoplay (some browsers block without user gesture)
+// Function to start bars animation
+function startBars() {
+  bars.forEach(bar => bar.style.animationPlayState = "running");
+}
+
+// Function to stop bars animation
+function stopBars() {
+  bars.forEach(bar => bar.style.animationPlayState = "paused");
+}
+
+// Try autoplay on load (some browsers block autoplay)
 window.addEventListener("load", async () => {
   try {
     await song.play();
     playBtn.textContent = "⏸";
-    bars.forEach(bar => bar.style.animationPlayState = "running");
+    startBars();
   } catch (err) {
-    console.log("Autoplay blocked by browser:", err);
+    // Autoplay blocked, user can click play
+    playBtn.textContent = "▶";
   }
 });
 
+// Play/pause button
 playBtn.addEventListener("click", () => {
   if (song.paused) {
     song.play();
     playBtn.textContent = "⏸";
-    bars.forEach(bar => bar.style.animationPlayState = "running");
+    startBars();
   } else {
     song.pause();
     playBtn.textContent = "▶";
-    bars.forEach(bar => bar.style.animationPlayState = "paused");
+    stopBars();
   }
 });
 
+// Stop bars when song ends
 song.addEventListener("ended", () => {
   playBtn.textContent = "▶";
-  bars.forEach(bar => bar.style.animationPlayState = "paused");
+  stopBars();
 });

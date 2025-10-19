@@ -35,11 +35,11 @@ header {
 
 .bio-short {
   background: #000;
+  position: relative;
   color: #fff;
   border: 2px solid #ccc;
   border-radius: 1rem;
   padding: 1rem;
-  width: 100%;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 

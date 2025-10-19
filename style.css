@@ -60,34 +60,34 @@ header {
 
 .music-player {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px 16px;
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  width: fit-content;
-  color: #fff;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #00ff66;
+  border-radius: 8px;
+  padding: 8px;
+  width: 220px;
   font-family: 'Verdana', sans-serif;
+  color: #00ff66;
+  box-shadow: 0 0 8px #00ff66;
 }
 
-.song-title {
-  font-size: 14px;
+.music-info {
+  font-size: 12px;
   font-weight: bold;
 }
 
 .controls {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 #playBtn {
   background: none;
   border: none;
-  color: #fff;
-  font-size: 18px;
+  color: #00ff66;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -96,16 +96,16 @@ header {
   align-items: flex-end;
   gap: 2px;
   height: 14px;
-  width: 20px;
+  flex-grow: 1;
 }
 
 .bar {
   width: 3px;
   height: 3px;
-  background: lime;
+  background: #00ff66;
   border-radius: 2px;
   animation: bounce 0.5s infinite;
-  animation-play-state: paused;
+  animation-play-state: paused; /* Start paused */
 }
 
 .bar:nth-child(2) { animation-delay: 0.1s; }
@@ -118,11 +118,9 @@ header {
   50% { height: 12px; }
 }
 
-/* --- Audio Player Styling --- */
-.now-playing audio {
+.music-player audio {
   width: 100%;
   outline: none;
-  filter: sepia(1) saturate(3) hue-rotate(90deg);
   border-radius: 4px;
 }
 

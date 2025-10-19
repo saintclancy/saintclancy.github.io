@@ -50,8 +50,6 @@ header {
   box-shadow: 0 0 8px #7f8cff;
 }
 
-.msOnlineNow { visibility: hidden; } .profileUserInfo { background: url('http://www.myspacegens.com/images/online_now/onlinenow.gif') no-repeat 0 55px; height: 75px; }
-
 h1, h2, h3 {
   font-family: 'Orbitron', sans-serif;
 }

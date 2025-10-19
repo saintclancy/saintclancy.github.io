@@ -44,15 +44,6 @@ header {
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
-.main-content {
-  flex: 1; /* assuming sidebar is a flex container */
-  padding: 12px;
-  background: rgba(0,0,0,0.6);
-  border-radius: 8px;
-  color: #00ff66;
-  font-family: 'Verdana', sans-serif;
-}
-
 /* Tab buttons */
 .tabs {
   display: flex;

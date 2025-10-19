@@ -1,32 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clancy Land</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clancy’s Corner</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>★ Welcome to Clancy Land ★</h1>
-    <p>Clancy - Software Engineer - Charlotte, NC</p>
+    <h1>🌐 Clancy’s Corner</h1>
+    <p>"Code. Coffee. Connection."</p>
   </header>
 
-  <main>
-    <section id="intro">
-      <p>About Me</p>
-    </section>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile-pic">
+        <img src="assets/images/profile.jpg" alt="Clancy">
+      </div>
+      <div class="bio-short">
+        <p><strong>Location:</strong> Charlotte, NC</p>
+        <p><strong>Status:</strong> Online 💬</p>
+      </div>
 
-    <section id="links">
-      <h2>Links</h2>
-      <ul>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </section>
-  </main>
+      <nav class="links">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Shop</a></li>
+        </ul>
+      </nav>
 
-  <footer>© 2025 Clancy Saint Cooper | Made with 💙 on GitHub Pages</footer>
+      <div class="top-friends">
+        <h3>Top Friends 🧠</h3>
+        <ul>
+          <li>☕ Cold Brew</li>
+          <li>🤖 GitHub Copilot</li>
+          <li>💡 Stack Overflow</li>
+          <li>🎧 Lo-Fi Beats</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <section class="bio">
+        <h2>About Me</h2>
+        <p>Hey there! I’m Clancy — a software engineer building resilient backend systems and exploring the intersection of code, creativity, and coffee. I love working with Java, Spring Boot, Kafka, and automation tools that make complex systems hum smoothly.</p>
+      </section>
+
+      <section class="summary">
+        <h2>Professional Summary</h2>
+        <p>Currently working as a Software Engineer I at Bank of America, focusing on distributed resiliency services and outbox pattern implementation. Passionate about clean code, automation, and building tools that make developers’ lives easier.</p>
+      </section>
+
+      <section class="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>💾 <strong>Outbox Processor Service:</strong> Implemented retry logic, logging improvements, and performance testing.</li>
+          <li>🕓 <strong>Async Scheduler Host:</strong> Automates record reprocessing for services using TTL-based scheduling.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 Clancy | Built by hand, hosted on GitHub Pages 🖥️</p>
+  </footer>
 </body>
 </html>

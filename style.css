@@ -50,27 +50,6 @@ header {
   box-shadow: 0 0 8px #7f8cff;
 }
 
-@keyframes pulse {
-  0% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.2); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-.status-badge .dot {
-  width: 8px;
-  height: 8px;
-  background-color: #00ff66;
-  border-radius: 50%;
-  box-shadow: 0 0 6px #00ff66;
-  animation: pulse 1.2s infinite;
-}
-
-.status-badge:hover {
-  background-color: #222;
-  box-shadow: 0 0 10px #00ff66;
-  cursor: default;
-}
-
 h1, h2, h3 {
   font-family: 'Orbitron', sans-serif;
 }

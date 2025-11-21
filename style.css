@@ -1,257 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
 
-body {
-  background: linear-gradient(120deg, #eaf0ff, #fff);
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  color: #222;
-}
-
-header {
-  text-align: center;
-  background: #000;
-  color: #fff;
-  padding: 1rem 0;
-  border-bottom: 4px solid #00a2ff;
-  font-family: 'Arimo', sans-serif;
-  box-shadow: 0 0 10px #00a2ff;
-}
-
-.container {
-  display: flex;
-  max-width: 1000px;
-  margin: 2rem auto;
-  gap: 2rem;
-  padding: 0 1rem;
-}
-
-.sidebar {
-  position: relative;
-  background: #f5f7ff;
-  border: 1px solid #ccc;
-  border-radius: 1rem;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-
-.bio-short {
-  background: #000;
-  position: relative;
-  color: #fff;
-  border: 2px solid #ccc;
-  padding: 1rem;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-
-.GeneratedMarquee {
-font-size:16px;
-line-height:1.3em;
-color:#FFFFFF;
-background-color:#000000;
-padding:1.5em;
-}
-
-.main-content {
-  flex: 1;
-  padding: 12px;
-  background: #ffffff;
-  border-radius: 8px;
-  color: #000; 
-  font-family: 'Arimo', sans-serif;
-}
-
-/* Tab buttons */
-.tabs {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 10px;
-}
-
-.tab-button {
-  padding: 6px 12px;
-  border: 1px solid #00ff66;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 12px;
-}
-
-.tab-button.active {
-  background: #fff;
-  color: #000;
-}
-
-/* Tab content sections */
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-.profile-pic img {
-  width: 80%;
-  height: auto;
-  border-radius: 1rem;
-  border: 3px solid #00a2ff;
-  box-shadow: 0 0 8px #7f8cff;
-}
-
-.status-icon {
-  width: 80px;
-  height: auto;
-  margin: 4px 0;    
-}
-
-.music-player::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* dark overlay for contrast */
-  border-radius: 12px;
-  z-index: 0;
-}
-
-.music-player * {
-  position: relative;
-  z-index: 1;
-}
-
-
-.music-player {
-  background-image: url("assets/images/music-player-bg.png");
-  background-size: cover;      /* fills the box without stretching */
-  background-position: center; /* centers image */
-  background-repeat: no-repeat;
-  position: relative;
-  border-radius: 12px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #00ff66;
-  box-shadow: 0 0 12px rgba(0,0,0,0.4);
-}
-
-.music-info {
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.controls {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-#playBtn {
-  background: none;
-  border: none;
-  color: #00ff66;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.equalizer {
-  display: flex;
-  align-items: flex-end;
-  gap: 2px;
-  height: 14px;
-  flex-grow: 1;
-}
-
-.bar {
-  width: 3px;
-  height: 3px;
-  background: #00ff66;
-  border-radius: 2px;
-  animation: bounce 0.5s infinite;
-  animation-play-state: paused; /* Start paused */
-}
-
-.bar:nth-child(2) { animation-delay: 0.1s; }
-.bar:nth-child(3) { animation-delay: 0.2s; }
-.bar:nth-child(4) { animation-delay: 0.3s; }
-.bar:nth-child(5) { animation-delay: 0.4s; }
-
-@keyframes bounce {
-  0%, 100% { height: 3px; }
-  50% { height: 12px; }
-}
-
-.music-player audio {
-  width: 100%;
-  outline: none;
-  border-radius: 4px;
-}
-
-/* Fullscreen video behind content */
-#bg-video {
-  position: fixed;   /* Stays in place */
+/* ===============================
+   BACKGROUND VIDEO
+=============================== */
+#bgVideo {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: cover; /* Fills screen without stretching */
-  z-index: -1;       /* Behind all content */
+  object-fit: cover;
+  z-index: -1;
 }
 
-/* Make sure your content is above video */
+/* ===============================
+   LAYOUT
+=============================== */
 .content-wrapper {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
-.video-header {
-  position: relative;
+.container {
+  max-width: 1100px; /* MySpace-ish width */
+}
+
+/* ===============================
+   SIDEBAR CARDS
+=============================== */
+.sidebar-card {
   width: 100%;
-  height: 100px;  /* adjust height as needed */
-  overflow: hidden;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  backdrop-filter: blur(4px);
 }
 
-#header-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* ensures the video fills the header without distortion */
-  transform: translate(-50%, -50%);
-  z-index: 0;
+/* Profile image */
+.profile-pic {
+  border-radius: 5px;
 }
 
-.header-content {
-  position: relative;
-  z-index: 1;           /* sits above the video */
-  color: #ffffff;
-  text-align: center;
-  padding-top: 80px;    /* adjust for vertical alignment */
-  text-shadow: 1px 1px 4px #000; /* improves readability over video */
+/* Online now icon */
+.online-icon {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
 }
 
-h1, h2, h3 {
-  font-family: 'Arimo', sans-serif;
+/* ===============================
+   MAIN CONTENT
+=============================== */
+.main-content .card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
 
-a {
-  color: #0070f3;
-  text-decoration: none;
+/* ===============================
+   MUSIC PLAYER
+=============================== */
+.music-card {
+  background-image: url("../images/music-bg.jpg"); /* optional background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
 }
 
-a:hover {
-  text-decoration: underline;
+/* Audio bars */
+.audio-bars {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.bar {
+  width: 6px;
+  height: 20px;
+  background: #6f42c1;
+  animation: bounce 0.6s infinite ease-in-out;
+  animation-play-state: paused;
 }
 
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 1rem;
-  color: #666;
-  border-top: 1px solid #ddd;
+.bar:nth-child(2) { animation-delay: .1s; }
+.bar:nth-child(3) { animation-delay: .2s; }
+.bar:nth-child(4) { animation-delay: .3s; }
+
+@keyframes bounce {
+  0%, 100% { height: 20px; }
+  50% { height: 35px; }
+}
+
+/* ===============================
+   TABS
+=============================== */
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
 }

@@ -43,14 +43,6 @@ header {
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-.top-friends {
-  background: #000;
-  position: relative;
-  color: #fff;
-  border: 2px solid #ccc;
-  padding: 1rem;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-
 .GeneratedMarquee {
 font-size:16px;
 line-height:1.3em;

@@ -35,10 +35,10 @@ header {
 }
 
 .sidebar-card .card-header {
-  background-color: rgba(0, 162, 255, 0.2); /* soft blue with transparency */
+  background-color: rgba(255, 135, 65, 0.4);
   color: #000; /* keeps text readable */
   font-weight: bold;
-  border-bottom: 1px solid rgba(0, 162, 255, 0.4); /* optional subtle border */
+  border-bottom: 1px solid rgb(252, 141, 94); /* optional subtle border */
   border-radius: 0.5rem 0.5rem 0 0; /* matches card rounding */
 }
 

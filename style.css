@@ -26,9 +26,6 @@ header {
 }
 
 .sidebar {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
   position: relative;
   background: #f5f7ff;
   border: 1px solid #ccc;
@@ -61,7 +58,6 @@ padding:1.5em;
 .main-content {
   flex: 1;
   padding: 12px;
-  height: 100%;
   background: #ffffff;
   border-radius: 8px;
   color: #000; 
@@ -211,8 +207,6 @@ padding:1.5em;
 
 /* Make sure your content is above video */
 .content-wrapper {
-  display: flex;
-  align-items: stretch;
   position: relative;
   z-index: 1;
 }
@@ -233,11 +227,6 @@ padding:1.5em;
   object-fit: cover;   /* ensures the video fills the header without distortion */
   transform: translate(-50%, -50%);
   z-index: 0;
-}
-
-.row {
-  --bs-gutter-x: 1.5rem; /* keep horizontal spacing */
-  --bs-gutter-y: 0;      /* remove vertical gap */
 }
 
 .header-content {

@@ -116,9 +116,17 @@ padding:1.5em;
 }
 
 .status-icon {
-  width: 80px;
+  width: 24px;
   height: auto;
-  margin: 4px 0;    
+  margin: 6px;    
+}
+
+.online-status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* left-align inside the card */
+  margin-top: 8px; /* space from the profile pic */
+  padding-left: 10px; /* optional, adds a little breathing room */
 }
 
 .music-player::before {

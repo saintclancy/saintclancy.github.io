@@ -33,6 +33,11 @@ header {
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
+.sidebar-card {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 .bio-short {
   background: #000;
   position: relative;

@@ -27,12 +27,12 @@ header {
 
 .sidebar {
   position: relative;
-  background: #f5f7ff;
+  background: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
   border-right: 2px solid rgba(0,0,0,0.1);
-  padding-right: 15px;
   border: 1px solid #ccc;
-  border-radius: 1rem;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
 .sidebar-card {

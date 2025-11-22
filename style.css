@@ -31,7 +31,7 @@ header {
   padding: 0 !important;
   box-shadow: none !important;
   border-radius: 0 !important;
-  border-right: 20px solid rgba(0,0,0,0.1);
+  border-right: 20px;
 }
 
 .sidebar-card {

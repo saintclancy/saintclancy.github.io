@@ -256,6 +256,14 @@ ul {
   padding: 0;
 }
 
+.content-panel {
+  background: rgba(255,255,255,0.75);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+  margin-bottom: 40px;
+}
+
 footer {
   text-align: center;
   font-size: 0.9rem;

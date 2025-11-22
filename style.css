@@ -32,12 +32,16 @@ header {
   box-shadow: none !important;
   border-radius: 0 !important;
   border-right: 2px solid rgba(0,0,0,0.1);
-  border: 1px solid #ccc;
 }
 
 .sidebar-card {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
+}
+
+.sidebar img.card-img-top {
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .bio-short {

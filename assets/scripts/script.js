@@ -12,10 +12,12 @@ document.querySelectorAll('.nav-link[data-tab]').forEach(tab => {
         const selected = this.getAttribute('data-tab');
 
         // Remove active from nav links
-        document.querySelectorAll('.nav-link').forEach(link => {
+        document.querySelectorAll('.nav-link[data-tab]').forEach(link => {
             link.classList.remove('active');
+          link.setAttribute('aria-selected', 'false');
         });
         this.classList.add('active');
+        this.setAttribute('aria-selected', 'true');
 
         // Hide all content sections
         document.querySelectorAll('.tab-content').forEach(section => {
@@ -64,4 +66,25 @@ playBtn.addEventListener("click", async () => {
 song.addEventListener("ended", () => {
   playBtn.textContent = "▶";
   stopBars();
+});
+
+// Filter portfolio cards without leaving the page.
+document.querySelectorAll('.filter-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const selectedFilter = button.dataset.filter;
+
+    document.querySelectorAll('.filter-button').forEach(filterButton => {
+      filterButton.classList.toggle('active', filterButton === button);
+    });
+
+    document.querySelectorAll('.project-card').forEach(card => {
+      const matchesFilter = selectedFilter === 'all' || card.dataset.category === selectedFilter;
+      card.hidden = !matchesFilter;
+    });
+  });
+});
+
+document.querySelector('.portfolio-link')?.addEventListener('click', event => {
+  event.preventDefault();
+  document.querySelector('.nav-link[data-tab="portfolio"]')?.click();
 });

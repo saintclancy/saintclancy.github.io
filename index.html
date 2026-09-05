@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Sacramento&display=swap" rel="stylesheet">
     <title>xX CLANCYLAND Xx</title>
     <link rel="stylesheet" href="style.css">
     <script src="assets/scripts/script.js" defer></script>
@@ -53,7 +53,7 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item"><a href="https://www.linkedin.com/in/clancylong/">LinkedIn</a></li>
       <li class="list-group-item"><a href="https://github.com/clancycooper">GitHub</a></li>
-      <li class="list-group-item"><a href="#">Portfolio</a></li>
+      <li class="list-group-item"><a class="portfolio-link" href="#portfolio">Portfolio</a></li>
       <li class="list-group-item"><strong>Location:</strong> Charlotte, NC</li>
       <li class="list-group-item"><strong>Mood:</strong> Excited 🤩</li>
     </ul>
@@ -68,7 +68,7 @@
     </div>
 
     <div class="controls">
-      <button id="playBtn">▶</button>
+      <button id="playBtn" type="button" aria-label="Play When It's Over">▶</button>
       <div class="equalizer">
         <div class="bar"></div>
         <div class="bar"></div>
@@ -84,21 +84,27 @@
 <!-- Main content -->
 <main class="main-content col-12 col-md-8 col-lg-9">
 <!-- Tabs -->
-    <div class="clancy-blurbs"><h2>Clancy's Blurbs</h2>
-    <ul class="nav nav-tabs" id="profileTabs">
+    <div class="clancy-blurbs">
+      <div class="blurbs-heading">
+        <div>
+          <p class="blurbs-kicker">PROFILE // CLANCYLAND</p>
+          <h2><span class="blurbs-signature">Clancy's</span> <span class="blurbs-pattern">Blurbs</span></h2>
+        </div>
+      </div>
+    <ul class="nav nav-tabs" id="profileTabs" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" data-tab="about" href="#">About Me</a>
+        <a class="nav-link active" data-tab="about" href="#about" role="tab" aria-selected="true">About Me</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-tab="portfolio" href="#">Portfolio</a>
+        <a class="nav-link" data-tab="portfolio" href="#portfolio" role="tab" aria-selected="false">Portfolio</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-tab="blog" href="#">Blog</a>
+        <a class="nav-link" data-tab="blog" href="#blog" role="tab" aria-selected="false">Blog</a>
         </li>
     </ul>
 
   <!-- Tab content sections -->
-  <div class="tab-content active" id="about">
+  <div class="tab-content active" id="about" role="tabpanel">
     <section class="bio">
       <!-- About Me -->
         <h2 class="display-6">About Me</h2>
@@ -112,17 +118,80 @@
         <p>
             Brings ownership and expertise across <b>development, CI/CD, testing, observability, configuration, governance, and production support.</b> Known for <b>clear communication, cross-team collaboration,</b> and <b>delivering reliable solutions in highly regulated enterprise environments.</b>
         </p>
+        <div class="achievement-strip" aria-label="Career highlights">
+          <div class="achievement">
+            <strong>Event-driven</strong>
+            <span>Systems thinking</span>
+          </div>
+          <div class="achievement">
+            <strong>Resilient</strong>
+            <span>Production-minded delivery</span>
+          </div>
+          <div class="achievement">
+            <strong>SME</strong>
+            <span>Trusted technical partner</span>
+          </div>
+        </div>
       </section>
   </div>
 <!-- Portfolio -->
-  <div class="tab-content" id="portfolio">
-    <h2 class="display-6">Portfolio</h2>
-    <p>Here are some of my projects and work samples...</p>
+  <div class="tab-content" id="portfolio" role="tabpanel">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h2 class="display-6">Projects &amp; Impact</h2>
+      </div>
+      <span class="status-pill">Currently building</span>
+    </div>
+    <div class="portfolio-filters" aria-label="Filter projects">
+      <button class="filter-button active" type="button" data-filter="all">Everything</button>
+      <button class="filter-button" type="button" data-filter="systems">Systems</button>
+      <button class="filter-button" type="button" data-filter="web">Web &amp; personal</button>
+    </div>
+    <div class="project-grid">
+      <article class="project-card" data-category="systems">
+        <div class="project-card-top"><span class="project-number">01</span><span class="project-type">Systems</span></div>
+        <h3>Reactive Service Modernization</h3>
+        <p>Helping move legacy services toward resilient, event-driven architecture with Spring Boot and Kafka.</p>
+        <div class="tag-list"><span>Java</span><span>Kafka</span><span>Observability</span></div>
+      </article>
+      <article class="project-card" data-category="systems">
+        <div class="project-card-top"><span class="project-number">02</span><span class="project-type">Enterprise</span></div>
+        <h3>Production Readiness Practice</h3>
+        <p>Building the testing, configuration, governance, and support habits that help teams ship with confidence.</p>
+        <div class="tag-list"><span>CI/CD</span><span>Testing</span><span>Reliability</span></div>
+      </article>
+      <article class="project-card" data-category="web">
+        <div class="project-card-top"><span class="project-number">03</span><span class="project-type">Personal</span></div>
+        <h3>Clancy.Land</h3>
+        <p>A hand-built portfolio that mixes professional work, internet nostalgia, and a little personality.</p>
+        <div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      </article>
+    </div>
   </div>
 <!-- Blog -->
-  <div class="tab-content" id="blog">
-    <h2 class="display-6">Blog</h2>
-    <p>Professional insights, tech tips, and thoughts...</p>
+  <div class="tab-content" id="blog" role="tabpanel">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">From the desk</p>
+        <h2 class="display-6">Notes &amp; Updates</h2>
+      </div>
+      <span class="status-pill warm">Fresh thoughts</span>
+    </div>
+    <div class="updates-list">
+      <article class="update-item">
+        <time datetime="2025-01">JAN 2025</time>
+        <div><h3>What makes a service resilient?</h3><p>A field note on graceful failure, useful telemetry, and designing for the day everything goes sideways.</p></div>
+      </article>
+      <article class="update-item">
+        <time datetime="2024-12">DEC 2024</time>
+        <div><h3>Shipping the boring improvements</h3><p>The small changes to testing, configuration, and documentation that compound into calmer releases.</p></div>
+      </article>
+      <article class="update-item">
+        <time datetime="2024-11">NOV 2024</time>
+        <div><h3>Why I built this page by hand</h3><p>A quick hello from Clancy.Land and a reminder that a portfolio can sound like its owner.</p></div>
+      </article>
+    </div>
   </div>
     </div>
       

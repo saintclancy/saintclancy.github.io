@@ -106,6 +106,8 @@ padding:1.5em;
 /* Content box styled like inside a folder */
 .tab-content {
     display: none;
+    width: 100%;
+    min-width: 0;
     background: rgba(255,255,255,0.9);
     padding: 20px;
     border-style: none;
@@ -116,6 +118,188 @@ padding:1.5em;
 
 .tab-content.active {
   display: block;
+}
+
+.achievement-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.achievement {
+    padding: 14px;
+    background: #fff7df;
+    border: 1px solid #e6d39d;
+    border-left: 4px solid #ff8751;
+}
+
+.achievement strong {
+    display: block;
+    color: #e34f1c;
+    font-size: 1.45rem;
+    line-height: 1;
+}
+
+.achievement span {
+    display: block;
+    margin-top: 6px;
+    color: #5e5140;
+    font-size: 0.78rem;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.section-heading h2 {
+    margin-bottom: 0;
+}
+
+.eyebrow {
+    margin: 0 0 4px;
+    color: #e34f1c;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.status-pill,
+.project-type {
+    display: inline-block;
+    padding: 5px 9px;
+    border: 1px solid #9ed4e8;
+    border-radius: 999px;
+    background: #e7f8ff;
+    color: #075c7c;
+    font-size: 0.72rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-pill.warm {
+    border-color: #f3bf9d;
+    background: #fff0e8;
+    color: #a8451f;
+}
+
+.portfolio-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0;
+}
+
+.filter-button {
+    border: 1px solid #cbb98e;
+    border-radius: 999px;
+    background: #fffaf0;
+    color: #4a3d2c;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.78rem;
+    padding: 7px 12px;
+}
+
+.filter-button:hover,
+.filter-button.active {
+    background: #ff8751;
+    border-color: #e34f1c;
+    color: #fff;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 220px;
+    padding: 16px;
+    border: 1px solid #d9cba9;
+    background: linear-gradient(145deg, #fffdf8, #fff6df);
+    box-shadow: 3px 3px 0 rgba(207, 166, 105, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px) rotate(-0.5deg);
+    box-shadow: 5px 7px 0 rgba(207, 166, 105, 0.3);
+}
+
+.project-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-number {
+    color: #e34f1c;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.project-card h3 {
+    margin: 20px 0 8px;
+    font-size: 1.1rem;
+}
+
+.project-card p,
+.update-item p {
+    color: #5e5140;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: auto;
+    padding-top: 14px;
+}
+
+.tag-list span {
+    padding: 3px 7px;
+    background: #dff4f8;
+    color: #176578;
+    font-size: 0.7rem;
+}
+
+.updates-list {
+    margin-top: 20px;
+}
+
+.update-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 18px;
+    padding: 16px 0;
+    border-top: 1px dashed #d9cba9;
+}
+
+.update-item time {
+    color: #e34f1c;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
+.update-item h3 {
+    margin: 0 0 5px;
+    font-size: 1.05rem;
+}
+
+.update-item p {
+    margin: 0;
 }
 
 /* File Folder Tab Look */
@@ -164,6 +348,72 @@ padding:1.5em;
     border-radius: 8px;
     color: #000;
     font-family: 'Arimo', sans-serif;
+}
+
+.blurbs-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 16px;
+    margin: 2px 0 18px;
+    padding: 10px 14px 14px;
+    background: rgba(231, 248, 255, 0.68);
+    border-radius: 7px;
+    border-bottom: 3px solid #00a2ff;
+    box-shadow: 0 3px 0 #ff8751;
+    text-align: center;
+}
+
+.blurbs-heading > div {
+    width: 100%;
+    text-align: center;
+}
+
+.blurbs-kicker {
+    margin: 0 0 3px;
+    color: #e34f1c;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-align: left;
+}
+
+.blurbs-heading h2 {
+    margin: 0;
+    color: #000;
+    font-family: 'Caveat', cursive;
+    font-size: clamp(2.4rem, 4.5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 0.8;
+}
+
+.blurbs-signature {
+    display: inline-block;
+    transform: rotate(-2deg);
+}
+
+.blurbs-pattern {
+    display: inline-block;
+    color: transparent;
+    background-color: #f2e5c5;
+    background-image:
+        radial-gradient(ellipse 13px 9px at 12% 20%, #080808 0 58%, transparent 68%),
+        radial-gradient(ellipse 10px 16px at 72% 25%, #080808 0 56%, transparent 67%),
+        radial-gradient(ellipse 16px 10px at 40% 76%, #080808 0 59%, transparent 68%),
+        radial-gradient(ellipse 8px 7px at 92% 82%, #080808 0 56%, transparent 67%),
+        radial-gradient(ellipse 6px 5px at 60% 10%, #342f25 0 54%, transparent 66%);
+    background-size: 38px 32px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    filter: drop-shadow(1px 2px 1px rgba(74, 61, 44, 0.28));
+}
+
+@media (max-width: 480px) {
+    .blurbs-heading {
+        align-items: center;
+    }
 }
 
     .profile-pic img {
@@ -432,14 +682,34 @@ padding:1.5em;
         opacity: 1;
     }
 
+    @media (max-width: 991px) {
+        .project-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
     /* Mobile adjustments */
     @media (max-width: 768px) {
+        .achievement-strip,
+        .project-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .section-heading {
+            flex-wrap: wrap;
+        }
+
         .top5-friend {
             width: calc(33.33% - 10px); /* 3 per row */
         }
     }
 
     @media (max-width: 480px) {
+        .update-item {
+            grid-template-columns: 1fr;
+            gap: 6px;
+        }
+
         .top5-friend {
             width: calc(50% - 10px); /* 2 per row */
         }

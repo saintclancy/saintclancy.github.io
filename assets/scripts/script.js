@@ -4,38 +4,40 @@ const bars = document.querySelectorAll(".bar");
 
 //Tabs
 
-// Bootstrap Nav → Custom Tab Content
+const tabLinks = document.querySelectorAll('.nav-link[data-tab]');
+const tabSections = document.querySelectorAll('.tab-content');
+
+function showTab(selected) {
+  tabLinks.forEach(link => {
+    const isSelected = link.dataset.tab === selected;
+    link.classList.toggle('active', isSelected);
+    link.setAttribute('aria-selected', String(isSelected));
+  });
+
+  tabSections.forEach(section => {
+    const isSelected = section.id === selected;
+    section.classList.toggle('active', isSelected);
+    section.style.display = isSelected ? 'block' : 'none';
+  });
+}
+
+// Bootstrap Nav -> Custom Tab Content
 document.querySelectorAll('.nav-link[data-tab]').forEach(tab => {
     tab.addEventListener('click', function (e) {
         e.preventDefault();
-
-        const selected = this.getAttribute('data-tab');
-
-        // Remove active from nav links
-        document.querySelectorAll('.nav-link[data-tab]').forEach(link => {
-            link.classList.remove('active');
-          link.setAttribute('aria-selected', 'false');
-        });
-        this.classList.add('active');
-        this.setAttribute('aria-selected', 'true');
-
-        // Hide all content sections
-        document.querySelectorAll('.tab-content').forEach(section => {
-            section.classList.remove('active');
-            section.style.display = "none";
-        });
-
-        // Show selected content
-        const target = document.getElementById(selected);
-        if (target) {
-            target.classList.add('active');
-            target.style.display = "block";
-        }
+        const selected = this.dataset.tab;
+        showTab(selected);
+        history.replaceState(null, '', `#${selected}`);
     });
 });
 
+const initialTab = window.location.hash.slice(1);
+showTab([...tabLinks].some(tab => tab.dataset.tab === initialTab) ? initialTab : 'about');
+
 // Start with volume 50%
-song.volume = 0.5;
+if (song) {
+  song.volume = 0.5;
+}
 
 // Functions to control equalizer animation
 function startBars() {
@@ -46,7 +48,7 @@ function stopBars() {
 }
 
 // Only play on user interaction
-playBtn.addEventListener("click", async () => {
+playBtn?.addEventListener("click", async () => {
   try {
     if (song.paused) {
       await song.play();         // Play allowed because user clicked
@@ -63,7 +65,7 @@ playBtn.addEventListener("click", async () => {
 });
 
 // Stop bars when song ends
-song.addEventListener("ended", () => {
+song?.addEventListener("ended", () => {
   playBtn.textContent = "▶";
   stopBars();
 });
@@ -88,3 +90,5 @@ document.querySelector('.portfolio-link')?.addEventListener('click', event => {
   event.preventDefault();
   document.querySelector('.nav-link[data-tab="portfolio"]')?.click();
 });
+
+document.getElementById('copyright-year').textContent = new Date().getFullYear();

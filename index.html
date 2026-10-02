@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Sacramento&display=swap" rel="stylesheet">
     <title>xX CLANCYLAND Xx</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=7">
     <script src="assets/scripts/script.js" defer></script>
 </head>
 
@@ -21,8 +21,8 @@
 
   <!-- Header-->
   <header class="video-header">
-    <video autoplay muted id="header-video">
-      <source src="assets/images/Welcome to Clancy.Land.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline id="header-video">
+      <source src="assets/images/appreciated!.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
   </header>
@@ -40,7 +40,9 @@
 
   <!-- Profile Card -->
   <div class="card sidebar-card text-center">
-    <h2 class="profile-name">Clancy Long</h2>
+    <div class="profile-greeting">
+      <img src="assets/images/hello,.png" alt="Hello, I'm Clancy Long">
+    </div>
     <img src="assets/images/ClancyProfilePic.jpg" class="card-img-top" alt="Profile Picture">
     <div class="online-status">
       <img src="assets/images/myspace-online.gif" class="status-icon" alt="Online Now">
@@ -85,11 +87,11 @@
 <main class="main-content col-12 col-md-8 col-lg-9">
 <!-- Tabs -->
     <div class="clancy-blurbs">
-      <div class="blurbs-heading">
-        <div>
-          <p class="blurbs-kicker">PROFILE // CLANCYLAND</p>
-          <h2><span class="blurbs-signature">Clancy's</span> <span class="blurbs-pattern">Blurbs</span></h2>
-        </div>
+      <div class="blurbs-video-header">
+        <video autoplay muted loop playsinline aria-label="Clancy's Blurbs">
+          <source src="assets/images/blurbs_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     <ul class="nav nav-tabs" id="profileTabs" role="tablist">
         <li class="nav-item">
